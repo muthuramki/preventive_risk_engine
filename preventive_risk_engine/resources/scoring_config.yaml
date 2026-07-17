@@ -1,0 +1,70 @@
+# Preventive Care Risk Scoring -- master rules configuration.
+# Every value here is an INITIAL EXPERT PROPOSAL (Section 6/16) and must be
+# reviewed, validated on local data, and signed off by licensed clinicians
+# before production use. Changing values here does NOT require a code change.
+
+version: "rules_v2.0"
+
+# Section 6 / Table 5 -- sub-score weights, sum to 100.
+weights:
+  acute_deterioration: 20
+  chronic_disease_burden: 18
+  hospital_readmission: 15
+  medication: 12
+  compliance_adherence: 10
+  lifestyle_social: 10
+  care_gap: 8
+  preventive_care: 7
+
+# Section 7.9 -- red-flag override thresholds.
+red_flags:
+  news2_critical_threshold: 7
+  spo2_critical_threshold: 91
+  single_parameter_extreme_points: 3
+  acute_symptom_flags:
+    - chest_pain
+    - suspected_stroke
+    - suicidal_ideation
+
+# Section 1.0 -- published NEWS2 lookup tables (source of truth mirrored in
+# constants/risk_constants.py; keep both in sync when clinicians re-tune).
+news2_tables:
+  respiratory_rate:
+    - { max: 8, points: 3 }
+    - { min: 9, max: 11, points: 1 }
+    - { min: 12, max: 20, points: 0 }
+    - { min: 21, max: 24, points: 2 }
+    - { min: 25, points: 3 }
+  spo2:
+    - { max: 91, points: 3 }
+    - { min: 92, max: 93, points: 2 }
+    - { min: 94, max: 95, points: 1 }
+    - { min: 96, points: 0 }
+  systolic_bp:
+    - { max: 90, points: 3 }
+    - { min: 91, max: 100, points: 2 }
+    - { min: 101, max: 110, points: 1 }
+    - { min: 111, max: 219, points: 0 }
+    - { min: 220, points: 3 }
+  heart_rate:
+    - { max: 40, points: 3 }
+    - { min: 41, max: 50, points: 1 }
+    - { min: 51, max: 90, points: 0 }
+    - { min: 91, max: 110, points: 1 }
+    - { min: 111, max: 130, points: 2 }
+    - { min: 131, points: 3 }
+  temperature:
+    - { max: 35.0, points: 3 }
+    - { min: 35.1, max: 36.0, points: 1 }
+    - { min: 36.1, max: 38.0, points: 0 }
+    - { min: 38.1, max: 39.0, points: 1 }
+    - { min: 39.1, points: 2 }
+  supplemental_oxygen_points: 2
+  avpu_alert_points: 0
+  avpu_not_alert_points: 3
+
+# Section 13 -- freshness windows (days) for staleness tagging.
+freshness_windows_days:
+  hba1c: 425
+  eye_exam: 730
+  foot_exam: 365

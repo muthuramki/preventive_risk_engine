@@ -1,0 +1,78 @@
+# US locale pack (Appendix A.1: USPSTF / ADA / ACIP). Verified 2026-06-27.
+# Verification caveat: the USPSTF cervical-cancer statement checked was a
+# December 2024 draft -- confirm the finalized wording before production use.
+
+locale: US
+
+units:
+  glucose: mg/dL
+  hba1c: "%"
+  height: in
+  weight: lb
+  temperature: F
+
+reference_ranges:
+  hba1c_target: "< 7.0%"
+  bp_target: "< 130/80 mmHg"
+
+guideline_targets:
+  bp_target_systolic: 130
+  bp_target_diastolic: 80
+  hba1c_target_pct: 7.0
+
+screening_schedule:
+  - key: breast_mammography
+    category: preventive_care
+    population: "Female, 40-74"
+    interval: "Every 24 months"
+    source: "USPSTF 2024 (B)"
+  - key: colorectal
+    category: preventive_care
+    population: "45-75"
+    interval: "FIT yearly / colonoscopy 10 yr"
+    source: "USPSTF 2021 (A/B)"
+  - key: cervical_young
+    category: preventive_care
+    population: "Female, 21-29"
+    interval: "Cytology every 3 yr"
+    source: "USPSTF"
+  - key: cervical_older
+    category: preventive_care
+    population: "Female, 30-65"
+    interval: "HPV every 5 yr (co-test/cytology alt)"
+    source: "USPSTF"
+  - key: cvd_risk_statin
+    category: preventive_care
+    population: ">=1 risk factor, 40-75"
+    interval: "Statin if 10-yr risk >= 10%"
+    source: "USPSTF 2022 (B)"
+  - key: dysglycemia
+    category: preventive_care
+    population: "35-70 with overweight"
+    interval: "Every 3 years"
+    source: "USPSTF 2021 (B)"
+  - key: lung_low_dose_ct
+    category: preventive_care
+    population: "50-80, >=20 pack-years"
+    interval: "Annual"
+    source: "USPSTF 2021 (B)"
+  - key: diabetic_hba1c
+    category: care_gap
+    population: "Diabetes"
+    interval: "Every 6 mo (3 mo if not at goal)"
+    source: "ADA 2025"
+  - key: diabetic_eye_exam
+    category: care_gap
+    population: "Diabetes"
+    interval: "Annual (q1-2 yr if stable)"
+    source: "ADA 2025"
+  - key: diabetic_foot_exam
+    category: care_gap
+    population: "Diabetes"
+    interval: "Annual (more if high-risk)"
+    source: "ADA 2025"
+  - key: pneumococcal_vaccine
+    category: preventive_care
+    population: "From age 50"
+    interval: "Per ACIP series"
+    source: "ACIP 2024"

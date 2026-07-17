@@ -1,0 +1,6 @@
+{
+  "high_band_or_above": {"doctor": "Physician review within 7 days (24h if Critical)."},
+  "mild_to_moderate": {"nurse": "Nurse assessment and care-plan update."},
+  "care_gap_open": {"care_coordinator": "Close open guideline-recommended care gaps."},
+  "medication_risk_present": {"pharmacist": "Medication reconciliation and Beers/interaction review."}
+}

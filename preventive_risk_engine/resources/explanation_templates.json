@@ -1,0 +1,10 @@
+{
+  "acute_deterioration": "Vital signs indicate acute deterioration risk (NEWS2)",
+  "chronic_disease_burden": "High chronic disease burden / multimorbidity",
+  "hospital_readmission": "Recent hospital or ED utilization / readmission risk",
+  "medication": "Medication risk: polypharmacy or high-risk medications",
+  "compliance_adherence": "Sub-target medication adherence or missed appointments",
+  "lifestyle_social": "Social/lifestyle risk factors (SDOH) needing support",
+  "care_gap": "Open guideline-recommended care gaps",
+  "preventive_care": "Overdue preventive screening or immunization"
+}

@@ -1,0 +1,73 @@
+{
+  "patient_id": "P10001",
+  "risk_score": 31,
+  "risk_level": "Mild",
+  "red_flag": false,
+  "data_confidence": "High",
+  "sub_scores": {
+    "acute_deterioration": 0,
+    "chronic_disease_burden": 58.0,
+    "hospital_readmission": 65.0,
+    "medication": 35.0,
+    "compliance_adherence": 20.0,
+    "lifestyle_social": 20.0,
+    "care_gap": 20,
+    "preventive_care": 10
+  },
+  "instrument_provenance": {
+    "acute_deterioration": "NEWS2",
+    "chronic_disease_burden": "Charlson Comorbidity Index",
+    "hospital_readmission": "LACE index",
+    "medication": "Beers Criteria / STOPP-START + polypharmacy",
+    "compliance_adherence": "Proportion of Days Covered (PDC)",
+    "lifestyle_social": "SDOH screening",
+    "care_gap": "HEDIS-style care-gap rules",
+    "preventive_care": "USPSTF / India (NP-NCD) screening schedules"
+  },
+  "top_risk_drivers": [
+    "High chronic disease burden / multimorbidity",
+    "Recent hospital or ED utilization / readmission risk",
+    "Medication risk: polypharmacy or high-risk medications",
+    "Sub-target medication adherence or missed appointments",
+    "Social/lifestyle risk factors (SDOH) needing support"
+  ],
+  "screening_gaps": [
+    {
+      "key": "diabetic_hba1c",
+      "category": "care_gap",
+      "status": "overdue"
+    },
+    {
+      "key": "diabetic_eye_exam",
+      "category": "care_gap",
+      "status": "overdue"
+    },
+    {
+      "key": "colorectal",
+      "category": "preventive_care",
+      "status": "overdue"
+    }
+  ],
+  "recommended_actions": {
+    "patient": [
+      "Schedule overdue screenings/exams noted by your care team.",
+      "Discuss any barriers to taking medications as prescribed."
+    ],
+    "registered_nurse": [
+      "Nurse assessment and care-plan update."
+    ],
+    "care_coordinator": [
+      "Close open guideline-recommended care gaps.",
+      "Schedule overdue preventive screenings/immunizations.",
+      "Connect patient with social-resource support (transport/food/isolation) -- do not lower priority."
+    ],
+    "pharmacist": [
+      "Medication reconciliation and Beers/interaction review.",
+      "Adherence support / refill-barrier review."
+    ]
+  },
+  "escalation_level": "Routine follow-up",
+  "rules_version": "rules_v2.0",
+  "locale": "US",
+  "disclaimer": "Supports clinical review; does not replace judgment."
+}

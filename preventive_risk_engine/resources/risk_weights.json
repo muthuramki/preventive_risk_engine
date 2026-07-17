@@ -1,0 +1,10 @@
+{
+  "acute_deterioration": 20,
+  "chronic_disease_burden": 18,
+  "hospital_readmission": 15,
+  "medication": 12,
+  "compliance_adherence": 10,
+  "lifestyle_social": 10,
+  "care_gap": 8,
+  "preventive_care": 7
+}

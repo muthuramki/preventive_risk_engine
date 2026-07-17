@@ -1,0 +1,1 @@
+recursive-include preventive_risk_engine/resources *.yaml *.json

@@ -1,0 +1,16 @@
+{
+  "patient_id": "P10001",
+  "risk_score": null,
+  "risk_level": "Critical",
+  "red_flag": true,
+  "data_confidence": "High",
+  "sub_scores": {},
+  "instrument_provenance": {},
+  "top_risk_drivers": [],
+  "screening_gaps": [],
+  "recommended_actions": {},
+  "escalation_level": "Emergency escalation",
+  "rules_version": "rules_v2.0",
+  "locale": "US",
+  "disclaimer": "Supports clinical review; does not replace judgment."
+}

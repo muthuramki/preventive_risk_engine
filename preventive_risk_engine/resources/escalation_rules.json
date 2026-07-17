@@ -1,0 +1,9 @@
+{
+  "tiers": [
+    {"tier": "Routine follow-up", "trigger": "Low band, stable, no open red flags"},
+    {"tier": "Nurse review", "trigger": "Mild-Moderate, rising trend, adherence issue, or new care gap"},
+    {"tier": "Physician review", "trigger": "High band, significant adverse trend, or sub-score-specific concern"},
+    {"tier": "Urgent care recommendation", "trigger": "Critical band without immediate life-threat"},
+    {"tier": "Emergency escalation", "trigger": "Any red-flag override"}
+  ]
+}

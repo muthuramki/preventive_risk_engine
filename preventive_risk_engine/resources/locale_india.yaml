@@ -1,0 +1,54 @@
+# India locale pack (Appendix A.2: NP-NCD / ADA-equivalent). Verified 2026-06-27.
+# Eligible population enumerated at home by ASHAs using the Community-Based
+# Assessment Checklist (CBAC). Verification caveat: diabetes-monitoring
+# intervals borrow ADA values -- cross-check against RSSDI/ICMR guidance.
+
+locale: India
+
+units:
+  glucose: mmol/L
+  hba1c: "%"
+  height: cm
+  weight: kg
+  temperature: C
+
+reference_ranges:
+  hba1c_target: "< 7.0%"
+  bp_target: "< 130/80 mmHg"
+
+guideline_targets:
+  bp_target_systolic: 130
+  bp_target_diastolic: 80
+  hba1c_target_pct: 7.0
+
+screening_schedule:
+  - key: breast_cancer
+    category: preventive_care
+    population: "Female, 30-65"
+    interval: "Every 5 years"
+    source: "NP-NCD"
+  - key: cervical_cancer_via
+    category: preventive_care
+    population: "Female, 30-65"
+    interval: "Every 5 years (VIA)"
+    source: "NP-NCD"
+  - key: oral_cancer
+    category: preventive_care
+    population: "30-65"
+    interval: "Every 5 years"
+    source: "NP-NCD"
+  - key: hypertension_check
+    category: preventive_care
+    population: "30+"
+    interval: "Annual"
+    source: "NP-NCD"
+  - key: diabetes_check
+    category: preventive_care
+    population: "30+"
+    interval: "Annual"
+    source: "NP-NCD"
+  - key: diabetic_hba1c_eye_foot
+    category: care_gap
+    population: "Diabetes"
+    interval: "Per ADA/RSSDI intervals"
+    source: "ADA-2025/RSSDI"
